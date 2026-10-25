@@ -2,7 +2,7 @@
 
 Owner: Deepayan Sinha. The report and its submission are handled by Liezl Coetzee and are out of scope here. This site is a showcase for people who open the repo or the submission, not a judged document (the organiser said judges score only the PDF).
 
-Status: plan only, written 25 Oct 2026. Nothing is built or deployed.
+Status: plan and logo assets only, 25 Oct 2026. The site is not built or deployed.
 
 ## Name and places
 
@@ -17,6 +17,30 @@ Status: plan only, written 25 Oct 2026. Nothing is built or deployed.
 | Research repository (linked, not copied) | `github.com/Dsinha97/outskiller-ai-safety-sprint`, the repository cited in the report |
 
 The site itself does not use the team workspace's name or branding. The research repository's name appears only as the URL of the code link, because the report cites it.
+
+## Logo and brand assets (done)
+
+The logo (`logo.jpg`, 2048 x 2048, made by the owner) shows a watchdog silhouette holding a magnifying glass over a complaint folder, with a rubber stamp pressing on it. It carries the project's idea: a watchdog that reviews the files, and a stamp that can quietly decide what counts as routine.
+
+The source file has a checkerboard "transparent" background baked into its pixels, so the background was removed by `scripts/make_assets.py` (finds the checker region connected to the border, makes it transparent, and turns the enclosed light areas, the lens and the folder paper, into clean white). Re-run `python scripts/make_assets.py` to regenerate everything in `assets/` (needs Pillow, NumPy and SciPy).
+
+| File (in `assets/`) | Size | Use |
+|---|---|---|
+| `logo.png`, `logo-512.png`, `logo-256.png` | 1024, 512, 256 | Transparent mark, for light backgrounds |
+| `logo-on-white.png` | 1024 | Mark on white, for documents and sharing |
+| `logo-tile.png` | 1024 | Mark on a white rounded tile, for dark backgrounds (the navy folder vanishes on a navy page) |
+| `icon-512.png`, `icon-192.png` | 512, 192 | Web app icons (tile style) |
+| `apple-touch-icon.png` | 180 | iOS home screen (opaque) |
+| `favicon.ico`, `favicon-32.png`, `favicon-16.png` | 16, 32, 48 | Browser tab icon |
+| `og-image.png` | 1200 x 630 | Social card: tile, "Quiet Suppression" and the subtitle on navy |
+| `palette.json` | | Colours found in the artwork |
+
+Palette: amber `#E09228`, navy `#1B294A`, coral accent `#E67864`, white, and the page background navy `#0B1224` used in the social card. The video uses the same amber, navy and coral.
+
+Notes and limits:
+- Use the tile version on the site's dark header; the plain transparent mark only on light backgrounds.
+- At 16 px the mark reads as an amber and navy blob; at 32 px the dog, folder and stamp are recognisable. If a sharper tab icon is wanted, make a simplified mark (dog head only) for 16 and 32 px.
+- The magnifier glass is solid white, not see-through.
 
 ## Why a separate site
 
@@ -59,8 +83,9 @@ Put the file in `public/video/` of this repository and serve it as a static file
 
 ## Steps
 
-- [ ] Create the private GitHub repository `Dsinha97/quiet-suppression-demo` and push this plan
-- [ ] Scaffold the Next.js project (static export) with the site title and layout
+- [x] Create the private GitHub repository `Dsinha97/quiet-suppression-demo` and push this plan
+- [x] Logo made, background removed, icons and social card generated (`assets/`, `scripts/make_assets.py`)
+- [ ] Scaffold the Next.js project (static export) with the site title, layout, favicon set, `og-image.png` metadata and the tile logo in the header
 - [ ] Copy the video from `sources/team/` into `public/video/` and add a poster frame
 - [ ] Write the Home, Video, Results, Findings and How-we-worked pages from the report and the public repo tables
 - [ ] Take screenshots of the team workspace's Results and pilot-status pages (no private data visible)
