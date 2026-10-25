@@ -1,6 +1,6 @@
 # Quiet Suppression: public demo site
 
-A static companion site for the report *Quiet Suppression: Collusion and Watchdog Capture in AI Grievance Pipelines* (Apart Research AI Collusion Research Sprint, October 2026). The report is the judged document; this site only showcases it. The research code lives at [github.com/Dsinha97/outskiller-ai-safety-sprint](https://github.com/Dsinha97/outskiller-ai-safety-sprint).
+A static companion site for the report *Quiet Suppression: Collusion and Watchdog Capture in AI Grievance Pipelines* (Apart Research AI Collusion Research Sprint, October 2026). The report is the judged document; this site only showcases it. The research code lives at [github.com/Dsinha97/quiet-suppression-ai-safety-sprint](https://github.com/Dsinha97/quiet-suppression-ai-safety-sprint).
 
 All code here was written on 25 October 2026, during the sprint. Nothing in this repository is preexisting.
 

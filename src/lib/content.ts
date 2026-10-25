@@ -2,8 +2,8 @@
 // research repository's published tables before the site goes public (see PLAN.md, Risks).
 // No case text, notes or raw results belong in this file.
 
-export const CODE_URL = "https://github.com/Dsinha97/outskiller-ai-safety-sprint";
-export const CODE_LABEL = "github.com/Dsinha97/outskiller-ai-safety-sprint";
+export const CODE_URL = "https://github.com/Dsinha97/quiet-suppression-ai-safety-sprint";
+export const CODE_LABEL = "github.com/Dsinha97/quiet-suppression-ai-safety-sprint";
 
 // Final version shared by Liezl Coetzee on 25 Oct (sources/team/Quiet-Suppression-report.pdf).
 export const REPORT = { src: "/report/quiet-suppression-report.pdf", size: "389 KB", pages: 20 };

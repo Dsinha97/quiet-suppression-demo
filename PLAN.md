@@ -14,7 +14,7 @@ Status: plan and logo assets only, 25 Oct 2026. The site is not built or deploye
 | GitHub repository | `Dsinha97/quiet-suppression-demo`, private until the contents check below is done |
 | Vercel project | `quiet-suppression` (a new project, not the team workspace's) |
 | Video source | `sources/team/quiet-suppression-demo.mp4` (20.6 MB, 4:09), copied into `public/video/` of this project only |
-| Research repository (linked, not copied) | `github.com/Dsinha97/outskiller-ai-safety-sprint`, the repository cited in the report |
+| Research repository (linked, not copied) | `github.com/Dsinha97/quiet-suppression-ai-safety-sprint`, the repository cited in the report |
 
 The site itself does not use the team workspace's name or branding. The research repository's name appears only as the URL of the code link, because the report cites it.
 
