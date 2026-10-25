@@ -12,7 +12,7 @@ export const VIDEO = {
   src: "/video/quiet-suppression-demo.mp4",
   poster: "/video/poster.png",
   length: "4:09",
-  size: "20.6 MB",
+  size: "20.5 MB",
 };
 
 // As printed in the report.
