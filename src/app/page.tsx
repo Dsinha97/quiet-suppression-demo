@@ -12,6 +12,7 @@ const TEASER = ["Mistral Small 3.2 24B", "OLMo 3.1 32B Think", "gpt-oss-120b", "
 export default function Home() {
   return (
     <>
+      <div className="hero-bleed">
       <section className="wrap hero" aria-labelledby="title">
         <div className="hero-text">
           <p className="eyebrow">Apart Research · AI Collusion Research Sprint · October 2026</p>
@@ -54,15 +55,8 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <figure className="hero-card">
-          <img
-            src="/brand/qs-hero.jpg"
-            alt="Illustration: a single document passes through four glass panes, and in the third a stream of pages glows amber and falls away, while the rest fly on. The QS monogram and the words Quiet Suppression, collusion and watchdog capture, are at the left."
-            width={1400}
-            height={788}
-          />
-        </figure>
       </section>
+      </div>
 
       <section className="wrap" aria-labelledby="nums" style={{ paddingBottom: 88 }}>
         <h2 id="nums" className="eyebrow muted" style={{ marginBottom: 20, fontWeight: 400 }}>

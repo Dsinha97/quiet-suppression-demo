@@ -88,8 +88,11 @@ img { display: block; max-width: 100%; }
 .hero-text { flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
 .hero-title { font-family: var(--font-serif), Georgia, serif; font-weight: 300; font-size: clamp(44px, 6.4vw, 84px); line-height: 1.02; letter-spacing: -0.025em; }
 .hero-title em { font-style: italic; color: var(--amber); }
-.hero-card { flex: 1 1 520px; min-width: 0; margin: 0; }
-.hero-card img { display: block; width: 100%; height: auto; border-radius: 24px; border: 1px solid rgba(242, 234, 220, 0.08); }
+/* The project image sits behind the hero as decoration; the title text is real text on top. */
+.hero-bleed { position: relative; overflow: hidden; }
+.hero-bleed::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; aspect-ratio: 1500 / 844; max-width: 100%; background: url("/brand/qs-hero-bg.jpg") center / cover no-repeat; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 32%); mask-image: linear-gradient(90deg, transparent 0, #000 32%); pointer-events: none; }
+.hero-bleed::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 72%, var(--ground)); pointer-events: none; }
+.hero-bleed > .hero { position: relative; z-index: 1; }
 .hero-art { flex: 1 1 300px; display: flex; justify-content: center; }
 .hero-art .frame { width: min(340px, 100%); aspect-ratio: 1; border-radius: 40px; background: var(--surface); border: 1px solid rgba(242, 234, 220, 0.08); display: flex; align-items: center; justify-content: center; padding: 30px; }
 .authors { display: flex; flex-direction: column; gap: 8px; font-size: 15px; color: var(--fg2); }
@@ -189,4 +192,5 @@ img { display: block; max-width: 100%; }
   .hide-sm { display: none !important; }
   .section { padding-block: 64px; }
   .hero { padding-block: 56px 48px; }
+  .hero-bleed::before { left: 0; aspect-ratio: auto; background-position: 70% center; opacity: 0.32; -webkit-mask-image: none; mask-image: none; }
 }
