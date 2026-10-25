@@ -90,9 +90,9 @@ Put the file in `public/video/` of this repository and serve it as a static file
 - [x] Write the Home (with the video), Results, Findings and Team pages. The How-we-worked section and its screenshots were dropped after the mockup review (25 Oct)
 - [x] Recheck every number in `src/lib/content.ts` against the report (Tables D3, D6, D7, E1, E2) and the public repo's precedent-arms results note (25 Oct); added the first four watchdogs and the API harder-set rows, and aligned the Findings limits and controls with the report
 - [x] Safety checks 1 and 3: `npm run check` finds no emails, Drive or Discord links, invite or key patterns, forms or cookie writes; the built pages make no third-party requests
-- [ ] Safety check 2: open every page signed out in a private window (after deploy)
-- [ ] Create the Vercel project `quiet-suppression`, deploy, check in a private window
-- [ ] Make the repository public and share the link (user's call)
+- [x] Safety check 2: every page, the video and the social card load signed out at `quiet-suppression.vercel.app`, with no cookies or third-party requests (25 Oct)
+- [x] Create the Vercel project `quiet-suppression`, deploy, check signed out: live at https://quiet-suppression.vercel.app (25 Oct)
+- [x] Make the repository public (25 Oct); sharing the link is the owner's call
 
 ## Decisions for the owner
 
