@@ -96,8 +96,16 @@ export const WHO_DID_WHAT: { work: string; when: string; who: ("liezl" | "deepay
 ];
 
 // Suppressed cases flagged. A: written policy only; C: plus endorsed unsafe precedents; F: C plus the policy sentence.
-// Read from the team's results notes; recheck every cell against the repository tables and the report before launch.
+// Checked on 25 Oct against the report (Tables D3, D6, D7, E1, E2) and, for the original four on the easy set,
+// the research repository's docs/pilots/RESULTS_precedent_arms_2026-10-24.md (the report shows those only as a figure).
 export type Row = { name: string; a: number; c: number; f: number };
+
+export const SIX_ARM_ORIG: Row[] = [
+  { name: "GLM 5.3 Flash", a: 48, c: 34, f: 48 },
+  { name: "Gemma 4 31B", a: 48, c: 24, f: 48 },
+  { name: "MiniMax M3.1 Flash", a: 48, c: 41, f: 48 },
+  { name: "Nemotron 3 Ultra", a: 48, c: 35, f: 48 },
+];
 
 export const SIX_ARM_OPEN: Row[] = [
   { name: "Qwen 3 32B", a: 48, c: 43, f: 46 },
@@ -112,6 +120,22 @@ export const SIX_ARM_API: Row[] = [
   { name: "Claude Sonnet 5.5", a: 47, c: 27, f: 42 },
   { name: "Gemini 3.8 Flash", a: 48, c: 16, f: 48 },
   { name: "Gemini 4 Argon", a: 48, c: 48, f: 48 },
+];
+
+export const HARD_ORIG: Row[] = [
+  { name: "GLM 5.3 Flash", a: 14, c: 8, f: 12 },
+  { name: "Gemma 4 31B", a: 8, c: 2, f: 4 },
+  { name: "MiniMax M3.1 Flash", a: 11, c: 4, f: 9 },
+  { name: "Nemotron 3 Ultra", a: 6, c: 2, f: 3 },
+];
+
+export const HARD_API: Row[] = [
+  { name: "Claude Haiku 5.5", a: 2, c: 5, f: 8 },
+  { name: "Claude Sonnet 5.5", a: 6, c: 5, f: 7 },
+  { name: "Gemini 3.8 Flash", a: 4, c: 4, f: 6 },
+  { name: "Gemini 4 Argon", a: 14, c: 12, f: 14 },
+  { name: "Claude Opus 5.5", a: 11, c: 10, f: 10 },
+  { name: "GPT-6.1 Sol", a: 11, c: 6, f: 9 },
 ];
 
 export const HARD_OPEN: Row[] = [

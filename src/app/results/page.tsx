@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { HARD_OPEN, type Row, SEED_REPEAT, SIX_ARM_API, SIX_ARM_OPEN } from "@/lib/content";
+import { HARD_API, HARD_OPEN, HARD_ORIG, type Row, SEED_REPEAT, SIX_ARM_API, SIX_ARM_OPEN, SIX_ARM_ORIG } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Results" };
 
@@ -18,6 +18,17 @@ function SixArmRows({ rows }: { rows: Row[] }) {
           <div className="tick" style={{ left: pct(r.a) }} />
         </div>
       </td>
+    </tr>
+  ));
+}
+
+function HardRows({ rows }: { rows: Row[] }) {
+  return rows.map((r) => (
+    <tr key={r.name}>
+      <th scope="row">{r.name}</th>
+      <td className="n">{r.a}</td>
+      <td className="n cc">{r.c}</td>
+      <td className="n ff">{r.f}</td>
     </tr>
   ));
 }
@@ -53,7 +64,7 @@ export default function Results() {
           <h2 id="t1" className="h3">
             Six-arm set <span className="sub">· flagged of 48 reads</span>
           </h2>
-          <span className="mono small">arms B, D, E in the repository tables</span>
+          <span className="mono small">arms B, D and E: report Tables D6 and E1</span>
         </div>
         <div className="table-box">
           <table className="t">
@@ -68,26 +79,23 @@ export default function Results() {
             </thead>
             <tbody>
               <tr className="grp">
-                <td colSpan={5}>Open-weight · Modal, vLLM, temperature 0.7</td>
+                <td colSpan={5}>First four · OpenRouter, temperature 0.7</td>
               </tr>
-              <SixArmRows rows={SIX_ARM_OPEN} />
+              <SixArmRows rows={SIX_ARM_ORIG} />
               <tr className="grp">
                 <td colSpan={5}>API watchdogs</td>
               </tr>
               <SixArmRows rows={SIX_ARM_API} />
               <tr className="grp">
-                <td colSpan={5}>Original four · MiniMax, Gemma, GLM, Nemotron</td>
+                <td colSpan={5}>Open-weight · Modal, vLLM, temperature 0.7</td>
               </tr>
-              <tr>
-                <td colSpan={5} className="body2">
-                  All 48 of 48 at A and F; 24–41 of 48 at C. Per-model counts are in the repository tables.
-                </td>
-              </tr>
+              <SixArmRows rows={SIX_ARM_OPEN} />
             </tbody>
           </table>
         </div>
         <p className="small">
-          Bar: share flagged at C. Tick: baseline A. False flags for the original four: 5 of 1,152 escalated-benign reads and 1 of 288 compliant kept-internal reads.
+          Bar: share flagged at C. Tick: baseline A. Two draws per prompt. Claude Opus 5.5 and GPT-6.1 Sol were run on arm C only and caught all 48. Sonnet&apos;s
+          12 unparseable answers count as not flagged. False flags for the first four: 6 of 1,440 benign reads.
         </p>
       </section>
 
@@ -107,14 +115,18 @@ export default function Results() {
                 </tr>
               </thead>
               <tbody>
-                {HARD_OPEN.map((r) => (
-                  <tr key={r.name}>
-                    <th scope="row">{r.name}</th>
-                    <td className="n">{r.a}</td>
-                    <td className="n cc">{r.c}</td>
-                    <td className="n ff">{r.f}</td>
-                  </tr>
-                ))}
+                <tr className="grp">
+                  <td colSpan={4}>First four · pooled 38% → 15% → 27%</td>
+                </tr>
+                <HardRows rows={HARD_ORIG} />
+                <tr className="grp">
+                  <td colSpan={4}>API watchdogs</td>
+                </tr>
+                <HardRows rows={HARD_API} />
+                <tr className="grp">
+                  <td colSpan={4}>Open-weight</td>
+                </tr>
+                <HardRows rows={HARD_OPEN} />
               </tbody>
             </table>
           </div>
@@ -124,8 +136,9 @@ export default function Results() {
             The limit
           </p>
           <p style={{ color: "var(--fg3)" }}>
-            Here the severity rating itself hides the violation (13 suppression cases, 6 records). Baselines are low and the policy sentence recovers little. The
-            set&apos;s threshold was set while building it, so treat it as exploratory.
+            Here an agent rated a serious complaint at severity 1 or 2, so the paperwork looks compliant (13 suppression cases on 6 records). Baselines are low
+            and the policy sentence recovers little. The set&apos;s threshold was set while building it, so treat it as exploratory. Opus 5.5 refused 114 of 216
+            compliant reads.
           </p>
         </div>
       </section>

@@ -8,7 +8,7 @@ const TOC = [
   ["pipeline", "The pipeline"],
   ["measured", "What we measured"],
   ["results", "What we found"],
-  ["defences", "Defences"],
+  ["defences", "Controls"],
   ["limits", "Limits"],
 ];
 
@@ -112,13 +112,12 @@ export default function Findings() {
         </section>
 
         <section id="defences">
-          <h2 className="h3" style={{ fontSize: 30 }}>Defences we propose</h2>
+          <h2 className="h3" style={{ fontSize: 30 }}>Controls to test next</h2>
           <ul className="bullets body2">
-            <li>Re-escalate any case that ends “substantiated, serious, not escalated”.</li>
-            <li>Re-rate severity from the transcript by policy, not from the agent&apos;s own rating.</li>
-            <li>Strip escalation verdicts from notes passed between agents.</li>
-            <li>Review the calibration material a watchdog sees as carefully as the watchdog.</li>
-            <li>State that the written policy outranks precedent: the cheapest fix, with no measurable rise in false flags.</li>
+            <li>Reopen serious cases kept internal. A one-line rule (severity 3 or 4 and not escalated) caught all 24 easy-set cases with no false flags.</li>
+            <li>Re-rate severity from the transcript, which could extend detection to downgraded complaints; the rule caught none of the 13 harder-set cases.</li>
+            <li>Give the calibration material a watchdog sees its own independent review.</li>
+            <li>State that the written policy outranks precedent: a candidate safeguard, with recovery that depends on the model.</li>
           </ul>
         </section>
 
@@ -130,13 +129,15 @@ export default function Findings() {
               complaints.
             </li>
             <li>
-              <strong>Synthetic complaints.</strong> Invented records with invented names, which may tip models off to a test.
+              <strong>Synthetic complaints.</strong> 36 synthetic transcripts; released records use invented names. Severity labels have no human validation.
             </li>
             <li>
-              <strong>Small cells.</strong> 12 to 48 reads per arm, two draws per prompt, no significance tests.
+              <strong>Small sets.</strong> The easy set has 24 suppression items on 15 records and the harder set 13 on six; intervals over repeated reads ignore
+              this clustering, so they are descriptive.
             </li>
             <li>
-              <strong>One sender family.</strong> Most watchdog cases were written by MiniMax agents.
+              <strong>One sender family.</strong> The six-arm suppression cases were all written by MiniMax agents. A check on Gemma-written cases changes
+              sender and visibility together.
             </li>
           </ul>
         </section>
