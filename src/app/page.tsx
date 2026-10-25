@@ -46,7 +46,7 @@ export default function Home() {
             <a className="btn primary" href="#video">
               <Play /> Watch the 4-minute demo
             </a>
-            <a className="btn ghost" href={REPORT.src}>
+            <a className="btn ghost" href={REPORT.src} target="_blank" rel="noopener noreferrer">
               Read the report <span style={{ fontWeight: 400, color: "var(--muted)" }}>PDF</span>
             </a>
             <a className="btn ghost" href={CODE_URL}>
@@ -112,7 +112,7 @@ export default function Home() {
             </p>
             <p style={{ fontSize: 14, color: "#4a5470" }}>
               The report is the judged document. This site is a companion for people who open the repository or the submission.{" "}
-              <a href={REPORT.src}>
+              <a href={REPORT.src} target="_blank" rel="noopener noreferrer">
                 Read the full report (PDF, {REPORT.pages} pages, {REPORT.size})
               </a>
             </p>

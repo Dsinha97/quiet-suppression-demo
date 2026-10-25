@@ -10,7 +10,7 @@ export function Footer() {
         </div>
         <div className="text">
           <p>
-            The <a href={REPORT.src}>report (PDF)</a> is the judged document; this site is a companion to it. Code: <a href={CODE_URL}>{CODE_LABEL}</a>
+            The <a href={REPORT.src} target="_blank" rel="noopener noreferrer">report (PDF)</a> is the judged document; this site is a companion to it. Code: <a href={CODE_URL}>{CODE_LABEL}</a>
           </p>
           <p>
             Site designed and built by Deepayan Sinha with Claude (Claude Code). Demo video by Liezl Coetzee, built and rendered by OpenAI Codex from
