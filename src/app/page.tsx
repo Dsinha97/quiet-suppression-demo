@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Info, Play } from "@/components/Icons";
-import { ABSTRACT, AI_USE_NOTE, CODE_URL, ORGS, PEOPLE, POLICY_SENTENCE, REPORT, SIX_ARM_API, SIX_ARM_OPEN, VIDEO, VIDEO_BY } from "@/lib/content";
+import { ABSTRACT, AI_USE_NOTE, CODE_URL, ORGS, PEOPLE, POLICY_SENTENCE, REPORT, SLIDES, SIX_ARM_API, SIX_ARM_OPEN, VIDEO, VIDEO_BY } from "@/lib/content";
 
 const pct = (n: number) => `${Math.round((n / 48) * 100)}%`;
 
@@ -114,6 +114,10 @@ export default function Home() {
               The report is the judged document. This site is a companion for people who open the repository or the submission.{" "}
               <a href={REPORT.src} target="_blank" rel="noopener noreferrer">
                 Read the full report (PDF, {REPORT.pages} pages, {REPORT.size})
+              </a>
+              {" · "}
+              <a href={SLIDES.src} target="_blank" rel="noopener noreferrer">
+                Slides (PDF, {SLIDES.pages} slides, {SLIDES.size})
               </a>
             </p>
           </div>

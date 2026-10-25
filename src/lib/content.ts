@@ -7,6 +7,7 @@ export const CODE_LABEL = "github.com/Dsinha97/quiet-suppression-ai-safety-sprin
 
 // Final version shared by Liezl Coetzee on 25 Oct (sources/team/Quiet-Suppression-report.pdf).
 export const REPORT = { src: "/report/quiet-suppression-report.pdf", size: "389 KB", pages: 20 };
+export const SLIDES = { src: "/slides/quiet-suppression-slides.pdf", size: "385 KB", pages: 14 };
 
 export const VIDEO = {
   src: "/video/quiet-suppression-demo.mp4",
