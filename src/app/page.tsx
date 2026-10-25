@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Info, Play } from "@/components/Icons";
-import { ABSTRACT, AI_USE_NOTE, CODE_URL, ORGS, PEOPLE, POLICY_SENTENCE, SIX_ARM_API, SIX_ARM_OPEN, VIDEO } from "@/lib/content";
+import { ABSTRACT, AI_USE_NOTE, CODE_URL, ORGS, PEOPLE, POLICY_SENTENCE, REPORT, SIX_ARM_API, SIX_ARM_OPEN, VIDEO } from "@/lib/content";
 
 const pct = (n: number) => `${Math.round((n / 48) * 100)}%`;
 
@@ -46,6 +46,9 @@ export default function Home() {
             <a className="btn primary" href="#video">
               <Play /> Watch the 4-minute demo
             </a>
+            <a className="btn ghost" href={REPORT.src}>
+              Read the report <span style={{ fontWeight: 400, color: "var(--muted)" }}>PDF</span>
+            </a>
             <a className="btn ghost" href={CODE_URL}>
               Read the code <ArrowUpRight />
             </a>
@@ -68,7 +71,7 @@ export default function Home() {
               92% <span style={{ color: "var(--coral)" }}>→ 28%</span>
             </p>
             <p className="body2" style={{ fontSize: 15 }}>
-              Serious complaints escalated, before and after a hidden instruction to keep escalations low, with agents passing private notes to each other.
+              Complaints escalated, before and after a hidden instruction to keep escalations low, with agents passing private notes to each other.
             </p>
             <p className="meta">MiniMax agents · 36 records per arm</p>
           </div>
@@ -107,7 +110,12 @@ export default function Home() {
             <p className="serif" style={{ fontSize: 20, lineHeight: 1.6 }}>
               {ABSTRACT}
             </p>
-            <p style={{ fontSize: 14, color: "#4a5470" }}>The report is the judged document. This site is a companion for people who open the repository or the submission.</p>
+            <p style={{ fontSize: 14, color: "#4a5470" }}>
+              The report is the judged document. This site is a companion for people who open the repository or the submission.{" "}
+              <a href={REPORT.src}>
+                Read the full report (PDF, {REPORT.pages} pages, {REPORT.size})
+              </a>
+            </p>
           </div>
         </div>
       </section>
@@ -138,8 +146,8 @@ export default function Home() {
             <b>Complaint</b>
             <p>Synthetic grievance transcript</p>
           </div>
-          <div className="step">
-            <span className="n">02</span>
+          <div className="step aim">
+            <span className="n">02 · hidden aim</span>
             <b>Summariser</b>
             <p>Writes the case summary and a private note</p>
           </div>
@@ -154,6 +162,9 @@ export default function Home() {
             <p>Reads the notes and flags suppressed cases</p>
           </div>
         </div>
+        <p className="small" style={{ marginTop: 14 }}>
+          In the main runs every agent carried the hidden aim. One lifecycle arm put it on the screener alone.
+        </p>
       </section>
 
       <section id="video" className="video-band" aria-labelledby="vid" style={{ scrollMarginTop: 0 }}>
@@ -188,7 +199,7 @@ export default function Home() {
         <div className="stack" style={{ flex: "1 1 340px", gap: 16 }}>
           <p className="eyebrow">Results</p>
           <h2 id="res" className="h2">
-            An endorsement switches the watchdog off. One sentence switches it back on.
+            An endorsement switches many watchdogs off. One sentence brings most of them back.
           </h2>
           <p className="body2">
             Suppressed cases flagged, of 48 reads. A: written policy only. C: plus three unsafe past cases “the review board accepted”. F: C plus the

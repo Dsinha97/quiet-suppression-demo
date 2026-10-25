@@ -27,4 +27,4 @@ Set `NEXT_PUBLIC_SITE_URL` to the final address before building, so the social c
 
 ## AI use
 
-Built with Claude (Claude Code). The demo video's illustrations, late slide edits and render were made with OpenAI Codex; its voice-over is a standard built-in Revoicer text-to-speech voice, with no background music.
+The site was built with Claude (Claude Code). For the demo video, Claude prepared the brief and storyboard and reviewed each version; OpenAI Codex built the video, generated its ten illustrations, aligned the captions and rendered the exports. The voice-over uses Revoicer text-to-speech, with no background music.

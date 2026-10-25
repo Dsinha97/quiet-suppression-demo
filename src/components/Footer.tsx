@@ -1,4 +1,4 @@
-import { CODE_LABEL, CODE_URL } from "@/lib/content";
+import { CODE_LABEL, CODE_URL, REPORT } from "@/lib/content";
 
 export function Footer() {
   return (
@@ -10,11 +10,11 @@ export function Footer() {
         </div>
         <div className="text">
           <p>
-            The report is the judged document; this site is a companion to it. Code: <a href={CODE_URL}>{CODE_LABEL}</a>
+            The <a href={REPORT.src}>report (PDF)</a> is the judged document; this site is a companion to it. Code: <a href={CODE_URL}>{CODE_LABEL}</a>
           </p>
           <p>
-            Built with Claude (Claude Code). Video illustrations, late slide edits and render by OpenAI Codex; voice-over by a built-in Revoicer
-            text-to-speech voice. No cookies, forms or tracking.
+            Site built with Claude (Claude Code). Demo video built and rendered by OpenAI Codex from Claude&apos;s brief and storyboard; voice-over by Revoicer
+            text-to-speech. No cookies, forms or tracking.
           </p>
         </div>
       </div>

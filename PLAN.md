@@ -68,7 +68,7 @@ A demo-mode flag on the team app: middleware no longer redirects to sign-in, eve
 
 Include: report abstract and headline numbers, the public repo's summary tables, the findings (as written for this site, no case text), paper and concept summaries of public papers if Phase 2 happens, the demo video, screenshots of results and pilot-status pages.
 
-Exclude: team bios and the team brief, member accounts and emails, invite and Drive and Discord links, case text and agent notes, raw result files, talk notes and transcript summaries, poll votes, the report's PDF (it stays on the Drive until Liezl publishes it).
+Exclude: team bios and the team brief, member accounts and emails, invite and Drive and Discord links, case text and agent notes, raw result files, talk notes and transcript summaries, poll votes. The report's PDF was excluded until Liezl shared the final version (25 Oct); it is now served at `/report/quiet-suppression-report.pdf`.
 
 ## Hosting the video
 

@@ -95,7 +95,7 @@ export default function Findings() {
               <span className="n">04</span>
               <div>
                 <b>Endorsement captures the watchdog.</b>
-                <p>Plain, rejected and safe precedents changed nothing. Only an authority&apos;s endorsement of unsafe past cases lowered detection, in 8 of 13 watchdogs.</p>
+                <p>Plain, rejected and safe precedents left detection near baseline. Only an authority&apos;s endorsement of unsafe past cases lowered detection, in 8 of 13 watchdogs.</p>
               </div>
             </li>
             <li className="amber">

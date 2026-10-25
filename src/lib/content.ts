@@ -5,6 +5,9 @@
 export const CODE_URL = "https://github.com/Dsinha97/outskiller-ai-safety-sprint";
 export const CODE_LABEL = "github.com/Dsinha97/outskiller-ai-safety-sprint";
 
+// Final version shared by Liezl Coetzee on 25 Oct (sources/team/Quiet-Suppression-report.pdf).
+export const REPORT = { src: "/report/quiet-suppression-report.pdf", size: "389 KB", pages: 20 };
+
 export const VIDEO = {
   src: "/video/quiet-suppression-demo.mp4",
   poster: "/video/poster.png",
@@ -45,9 +48,9 @@ export const PEOPLE: Person[] = [
     name: "Liezl Coetzee",
     initials: "LC",
     org: "sociable",
-    place: "Caledon, South Africa",
+    place: "South Africa",
     bio: [
-      "Social scientist and writer of Sociable Systems. Background in social impact assessment, resettlement and grievance mechanisms on major extractives projects, including Mozambique LNG. Runs comparative experiments on what AI models do to grievance and consultation evidence, built on synthetic cases informed by project experience.",
+      "Social scientist and writer of Sociable Systems. Background in social impact assessment, resettlement and grievance mechanisms on major extractives projects. Runs comparative experiments on what AI models do to grievance and consultation evidence, built on synthetic cases informed by project experience.",
     ],
     contribution: "Designed the study, built the pipelines, ran the agent pilots and most watchdog experiments, and wrote the report.",
     swatch: "var(--amber)",
@@ -57,7 +60,7 @@ export const PEOPLE: Person[] = [
     name: "Deepayan Sinha",
     initials: "DS",
     org: "altiora",
-    place: "Williamsburg, Virginia",
+    place: "Williamsburg, Virginia, US",
     bio: [
       "Associate (Cohort 2026) at Altiora Systems, the Williamsburg, Virginia consultancy where MBA and graduate-level associates work under senior advisory oversight.",
       "MBA graduate from the Raymond A. Mason School of Business, William & Mary, with concentrations in Business Analytics and Supply Chain Management. Six years at Wipro Ltd leading AI/ML product engineering initiatives across global clients, plus a Lean Six Sigma Green Belt. Beta Gamma Sigma honoree. Bridges technical depth in Python, SQL and data analytics with business judgement for product and operational outcomes.",
@@ -70,7 +73,7 @@ export const PEOPLE: Person[] = [
     name: "Prashanth Vijay",
     initials: "PV",
     org: "altiora",
-    place: "Williamsburg, Virginia",
+    place: "Williamsburg, Virginia, US",
     bio: [
       "Founding Strategy Advisor at Altiora Systems, the Williamsburg, Virginia consultancy that pairs graduate-level associates with experienced advisors. He helped shape Altiora's consulting approach.",
       "9+ years across industrial operations, R&D, sales, business development, supply chain and market research. Holds an MBA and a B.E. in mechanical engineering, bringing a systems-minded view to growth, operations and emerging technology questions.",
@@ -154,4 +157,4 @@ export const SEED_REPEAT = [
 ];
 
 export const AI_USE_NOTE =
-  "Built with Claude (Claude Code); OpenAI Codex generated the illustrations, made late slide edits and rendered the video. The voice-over is a standard built-in Revoicer text-to-speech voice. No background music. All figures are taken from the report.";
+  "Claude prepared the brief and storyboard and reviewed each version. OpenAI Codex built the video: it generated the ten illustrations, aligned the captions and rendered the exports. The voice-over uses Revoicer text-to-speech, with no background music. All figures are taken from the report.";
