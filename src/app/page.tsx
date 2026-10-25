@@ -54,11 +54,14 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="hero-art hide-sm">
-          <div className="frame">
-            <img src="/brand/qs-lockup-dark.png" alt="Quiet Suppression logo: an interlaced QS monogram with an amber S, over the wordmark" width={280} height={196} />
-          </div>
-        </div>
+        <figure className="hero-card">
+          <img
+            src="/brand/qs-hero.jpg"
+            alt="Illustration: a single document passes through four glass panes, and in the third a stream of pages glows amber and falls away, while the rest fly on. The QS monogram and the words Quiet Suppression, collusion and watchdog capture, are at the left."
+            width={1400}
+            height={788}
+          />
+        </figure>
       </section>
 
       <section className="wrap" aria-labelledby="nums" style={{ paddingBottom: 88 }}>

@@ -14,7 +14,7 @@ export function Footer() {
           </p>
           <p>
             Site designed and built by Deepayan Sinha with Claude (Claude Code). Demo video by Liezl Coetzee, built and rendered by OpenAI Codex from
-            Claude&apos;s brief and storyboard; voice-over by Revoicer text-to-speech. No cookies, forms or tracking.
+            Claude&apos;s brief and storyboard; voice-over by Revoicer text-to-speech. The title image on the home page was generated with OpenAI Codex&apos;s image tool. No cookies, forms or tracking.
           </p>
         </div>
       </div>
