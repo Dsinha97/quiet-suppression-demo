@@ -85,11 +85,12 @@ Put the file in `public/video/` of this repository and serve it as a static file
 
 - [x] Create the private GitHub repository `Dsinha97/quiet-suppression-demo` and push this plan
 - [x] Logo made, background removed, icons and social card generated (`assets/`, `scripts/make_assets.py`)
-- [ ] Scaffold the Next.js project (static export) with the site title, layout, favicon set, `og-image.png` metadata and the tile logo in the header
-- [ ] Copy the video from `sources/team/` into `public/video/` and add a poster frame
-- [ ] Write the Home, Video, Results, Findings and How-we-worked pages from the report and the public repo tables
-- [ ] Take screenshots of the team workspace's Results and pilot-status pages (no private data visible)
-- [ ] Run the safety checks
+- [x] Scaffold the Next.js project (static export) with the site title, layout, favicon set and social-card metadata; header uses the new QS monogram (`QSlogo1.png`, assets from `scripts/make_qs_assets.py`)
+- [x] Copy the video from `sources/team/` into `public/video/`; the poster is the social card (no ffmpeg here to grab a frame)
+- [x] Write the Home (with the video), Results, Findings and Team pages. The How-we-worked section and its screenshots were dropped after the mockup review (25 Oct)
+- [ ] Recheck every number in `src/lib/content.ts` against the report and the public repo tables
+- [x] Safety checks 1 and 3: `npm run check` finds no emails, Drive or Discord links, invite or key patterns, forms or cookie writes; the built pages make no third-party requests
+- [ ] Safety check 2: open every page signed out in a private window (after deploy)
 - [ ] Create the Vercel project `quiet-suppression`, deploy, check in a private window
 - [ ] Make the repository public and share the link (user's call)
 
