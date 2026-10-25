@@ -13,8 +13,8 @@ export function Footer() {
             The <a href={REPORT.src}>report (PDF)</a> is the judged document; this site is a companion to it. Code: <a href={CODE_URL}>{CODE_LABEL}</a>
           </p>
           <p>
-            Site built with Claude (Claude Code). Demo video built and rendered by OpenAI Codex from Claude&apos;s brief and storyboard; voice-over by Revoicer
-            text-to-speech. No cookies, forms or tracking.
+            Site designed and built by Deepayan Sinha with Claude (Claude Code). Demo video by Liezl Coetzee, built and rendered by OpenAI Codex from
+            Claude&apos;s brief and storyboard; voice-over by Revoicer text-to-speech. No cookies, forms or tracking.
           </p>
         </div>
       </div>

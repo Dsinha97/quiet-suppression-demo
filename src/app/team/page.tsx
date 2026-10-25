@@ -52,7 +52,7 @@ export default function Team() {
           <h2 id="who" className="h3">
             Who did what
           </h2>
-          <span className="mono small">from the report&apos;s Author Contributions and Appendix B</span>
+          <span className="mono small">from the report&apos;s Author Contributions and Appendix B, plus the video and site</span>
         </div>
         <div className="table-box">
           <table className="t">

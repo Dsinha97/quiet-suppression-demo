@@ -52,7 +52,7 @@ export const PEOPLE: Person[] = [
     bio: [
       "Social scientist and writer of Sociable Systems. Background in social impact assessment, resettlement and grievance mechanisms on major extractives projects. Runs comparative experiments on what AI models do to grievance and consultation evidence, built on synthetic cases informed by project experience.",
     ],
-    contribution: "Designed the study, built the pipelines, ran the agent pilots and most watchdog experiments, and wrote the report.",
+    contribution: "Designed the study, built the pipelines, ran the agent pilots and most watchdog experiments, wrote the report, and produced the demo video.",
     swatch: "var(--amber)",
   },
   {
@@ -65,7 +65,7 @@ export const PEOPLE: Person[] = [
       "Associate (Cohort 2026) at Altiora Systems, the Williamsburg, Virginia consultancy where MBA and graduate-level associates work under senior advisory oversight.",
       "MBA graduate from the Raymond A. Mason School of Business, William & Mary, with concentrations in Business Analytics and Supply Chain Management. Six years at Wipro Ltd leading AI/ML product engineering initiatives across global clients, plus a Lean Six Sigma Green Belt. Beta Gamma Sigma honoree. Bridges technical depth in Python, SQL and data analytics with business judgement for product and operational outcomes.",
     ],
-    contribution: "Set up the repository, reviewed every pull request, ran the Claude, Gemini, gpt-oss, OLMo and narrow-question watchdogs, and edited the report.",
+    contribution: "Set up the repository, reviewed every pull request, ran the Claude, Gemini, gpt-oss, OLMo and narrow-question watchdogs, edited the report, and designed and built this website.",
     swatch: "var(--cream)",
   },
   {
@@ -76,14 +76,15 @@ export const PEOPLE: Person[] = [
     place: "Williamsburg, Virginia, US",
     bio: [
       "Founding Strategy Advisor at Altiora Systems, the Williamsburg, Virginia consultancy that pairs graduate-level associates with experienced advisors. He helped shape Altiora's consulting approach.",
-      "9+ years across industrial operations, R&D, sales, business development, supply chain and market research. Holds an MBA and a B.E. in mechanical engineering, bringing a systems-minded view to growth, operations and emerging technology questions.",
+      "9+ years across industrial operations, R&D, sales, business development, supply chain and market research. Holds an MBA in Supply Chain Management and Consulting and a B.E. in Mechanical Engineering, bringing a systems-minded view to growth, operations and emerging technology questions.",
     ],
-    contribution: "Brought the team together and ran the seed-1 repeats of the Qwen and Mistral watchdogs on Modal.",
+    contribution: "Brought the team together, contributed brainstorming and strategic insight, and ran the seed-1 repeats of the Qwen and Mistral watchdogs on Modal.",
     swatch: "var(--coral)",
   },
 ];
 
-// From the report's Author Contributions and Appendix B.
+// From the report's Author Contributions and Appendix B, plus three roles the team added for the site (25 Oct):
+// the demo video (Liezl), brainstorming and strategic insight (Prashanth) and the website (Deepayan).
 export const WHO_DID_WHAT: { work: string; when: string; who: ("liezl" | "deepayan" | "prashanth")[] }[] = [
   { work: "Study design", when: "", who: ["liezl"] },
   { work: "Pipelines and agent pilots", when: "", who: ["liezl"] },
@@ -94,9 +95,14 @@ export const WHO_DID_WHAT: { work: string; when: string; who: ("liezl" | "deepay
   { work: "Narrow-question watchdog", when: "24 Oct", who: ["deepayan"] },
   { work: "Seed-1 repeats of the Qwen and Mistral watchdogs on Modal", when: "25 Oct", who: ["prashanth"] },
   { work: "Bringing the team together", when: "", who: ["prashanth"] },
+  { work: "Brainstorming and strategic insight", when: "", who: ["prashanth"] },
   { work: "Writing the report", when: "", who: ["liezl"] },
   { work: "Editing the report", when: "", who: ["deepayan"] },
+  { work: "Demo video", when: "25 Oct", who: ["liezl"] },
+  { work: "Website design and build", when: "25 Oct", who: ["deepayan"] },
 ];
+
+export const VIDEO_BY = "Liezl Coetzee";
 
 // Suppressed cases flagged. A: written policy only; C: plus endorsed unsafe precedents; F: C plus the policy sentence.
 // Checked on 25 Oct against the report (Tables D3, D6, D7, E1, E2) and, for the original four on the easy set,

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Info, Play } from "@/components/Icons";
-import { ABSTRACT, AI_USE_NOTE, CODE_URL, ORGS, PEOPLE, POLICY_SENTENCE, REPORT, SIX_ARM_API, SIX_ARM_OPEN, VIDEO } from "@/lib/content";
+import { ABSTRACT, AI_USE_NOTE, CODE_URL, ORGS, PEOPLE, POLICY_SENTENCE, REPORT, SIX_ARM_API, SIX_ARM_OPEN, VIDEO, VIDEO_BY } from "@/lib/content";
 
 const pct = (n: number) => `${Math.round((n / 48) * 100)}%`;
 
@@ -172,7 +172,7 @@ export default function Home() {
           <div className="row" style={{ alignItems: "flex-end", justifyContent: "space-between", gap: 12 }}>
             <div>
               <p className="eyebrow" style={{ marginBottom: 10 }}>
-                Demo video · {VIDEO.length}
+                Demo video · {VIDEO.length} · by {VIDEO_BY}
               </p>
               <h2 id="vid" className="h2">
                 The project in four minutes
@@ -189,7 +189,7 @@ export default function Home() {
           <div className="note">
             <Info />
             <p>
-              <strong>How this video was made.</strong> {AI_USE_NOTE}
+              <strong>How this video was made.</strong> Produced by {VIDEO_BY}. {AI_USE_NOTE}
             </p>
           </div>
         </div>
